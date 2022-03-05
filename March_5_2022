@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>March 5, 2022</title>
+    <style>
+      body {background-color: LightGrey;}
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="search_box">
+        <div class-"search_btn"></div>
+        <input type="text" class="input_search" placeholder="Search...">
+        <button>Search</button>
+      </div>
+    </div>
+    
+    <h1>March 5, 2022</h1>
+    
+    <p>Here's a quick update on what I've been up to:</p>
+    <ul>
+      <li>In the process of submitting my Ohio Residency request</li>
+      <li>Renewed my AFRL clearence for March 7-April 7, I need to resend my info at the end of March to get it renewed in April</li>
+      <li>Still need to watch DESY LAP talk on Youtube</li>
+      <li>Need to start reading the lecture notes again and reviewing Ricky's documents</li>
+    </ul>
+    
+     <a href="https://ntamminga1.github.io/Research-Notes/ResearchLibrary.html">Back</a>
+  </body>
+</html>
