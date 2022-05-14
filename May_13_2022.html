@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>May 13, 2022</title>
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+    </script>
+    <style>
+      body {background-color: LightGrey;}
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="search_box">
+        <div class-"search_btn"></div>
+        <input type="text" class="input_search" placeholder="Search...">
+        <button>Search</button>
+      </div>
+    </div>
+    
+    <h1>May 13, 2022</h1>
+    
+    <p>2 meetings happened today.</p>
+    <p>First, met with Chris and Ricky. Discussed the D-D fusion occuring in the lab. The main question is where are the neutrons coming from? 
+    The main goal is to see how far the accelerated deuterons travel in the heavy water vapor before interacting with an additional particle. 
+    This may provide the interactions needed to explain the neutrons that are generated. Here are the important things to note for this 
+    calculation.</p>
+    
+    <ul>
+      <li>Check the mean free path of the deuterons. This is dependent inversely on cross section and number density. 
+        <a href="https://en.wikipedia.org/wiki/Mean_free_path">Here</a> is the link to the mean free path notes.</li>
+      <li>The pressure of the chamber is ~20 Torr.</li>
+      <li><a href="https://iopscience.iop.org/article/10.1088/0741-3335/50/6/065016">This</a> paper gives us a graph of the cross section for
+        neutron production for a given deuteron energy.</li>
+      <li><a href="https://aip.scitation.org/doi/pdf/10.1063/1.4963819">This</a> is a paper on high rep rate neutron production on a very similar
+        laser to that of Wright Patt. Read it.</li>
+      <li>Use <a href="https://physics.nist.gov/PhysRefData/Star/Text/PSTAR.html">NIST pstar</a> and 
+        <a href="https://physics.nist.gov/PhysRefData/Star/Text/ASTAR.html">NIST astar</a> for approximate energies of stopping powers for different
+        mediums, such as water vapor. *NOTE This does not have deuterons or heavy water, so use for approximations only*.</li>
+      <li>The <a href="https://en.wikipedia.org/wiki/Stopping_power_(particle_radiation)">stopping power</a> equation can be used to try and adjust 
+        the hydrogen to deuterium in our calculations. Try using the dE/dx method in E&M notes from the spring semester.</li>
+      <li>Remember, /frac{g/m&#178;}{g/m&#179;} leaves us with units of <i>m</i>.</li>
+    </ul>
+    
+    <p>The second meeting was with Scott, Chris and some students. The main take away for me was that I will be mainly working with Scott throughout
+      the summer as the experiment group portion of the NSF grant. As of right now, my main focus is getting supplies. Below is a list of the 
+      supplies Scott needs me to get in order to run the experiments from Columbus.</p>
+    <ul>
+      <li><a href="https://www.amazon.com/dp/B006QB1RPY/?tag=tchsptpf-green-20">Router: ASUS RT-N664 Gigabite Router Wireless N-900</a></li>
+      <li>4 Ethernet Cables</li>
+      <li>Download <a href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32 CubeIDE</a> software to program the Nucleo</li>
+      <li>2 <a href="https://www.amazon.com/AmazonBasics-USB-C-2-0-Micro-B-Cable/dp/B085SBPVDL/ref=sr_1_1_sspa?crid=10BWMZGVYGQKH&keywords=USB%2
+        BC%2Bto%2BUSB%2Bmicro&qid=1652470499&sprefix=usb%2Bc%2Bto%2Busb%2Bmicro%2Caps%2C148&sr=8-1-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyWlYyQk
+        NRVUlISjNJJmVuY3J5cHRlZElkPUEwMDAyMTQySUhLUDFPVFdVNDlKJmVuY3J5cHRlZEFkSWQ9QTA3NTI3ODgyRVhFMVZDMjU5MTdNJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1
+        jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&th=1">USB C to Micro USB cables</a> (USB 2.0 spec or better)</li>
+      <li><a href="https://www.amazon.com/Anker-Ethernet-PowerExpand-Aluminum-Portable/dp/B08CK9X9Z8/ref=sr_1_3?crid=15AR8OXCO3DF6&keywords=USB
+        +C+ethernet&qid=1652470633&sprefix=usb+c+ethe%2Caps%2C283&sr=8-3">USB C to Ethernet adapter</a></li>
+      <li>Download Labview on Mac</li>
+      <li><a href="https://www.amazon.com/Belkin-Charger-Delivery-Enabled-Charging/dp/B09GH6ZFB4/ref=sr_1_3?crid=AMPDO9YMXXFO&keywords=USB%2BC%
+        2Bbelkin%2Bdual&qid=1652470704&sprefix=usb%2Bc%2Bbelkin%2Bdua%2Caps%2C129&sr=8-3&th=1">USB C Wall Wart</a></li>
+      <li>2 <a href="https://www.amazon.com/Teensy-Without-Pins-Developer-Pack/dp/B08P4BZPFH/ref=sr_1_4?crid=3FWGZRW9FSUEF&keywords=teensy+4.1+
+        developer+kit&qid=1652470790&sprefix=teensy+4.1+developer+ki%2Caps%2C125&sr=8-4">Teensy 4.1</a> kits</li>
+      <li>2 Nucleo H745ZI-Q boards - Purchased by Chris on 5/13/22 - Shipping to OSU</li>
+    </ul>
+    
+    <p>Here are tasks to do before the next meeting:</p>
+    <ul>
+      <li>How far do our deuterons go in heavy water vapor?</li>
+      <li>Why does our water freeze below 20 Torr instead of evaporate?</li>
+      <li>Order supplies</li>
+    </ul>
+    
+     <a href="https://ntamminga1.github.io/Research-Notes/ResearchLibrary.html">Back</a>
+  </body>
+</html>
