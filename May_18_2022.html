@@ -22,7 +22,11 @@
     <p><i>Angular distribution of neutrons from high-intensity laser–target interactions</i> by J Davis and G M Petrov</p>
     <ul>
       <li>This paper mentions that they have a stopping power equation S(E\( _{i} \)). I believe that they are computing
-      these values as follows. $$ S_{D}(E) = S_{H}(\frac{E}{2}) $$</li>
+      these values as follows. $$ S_{D}(E) = S_{H}(\frac{E}{2}) $$ We can calculate the interactions with carbon and deuterium
+      based on the NIST STAR programs and the technique above. The paper combines the C and D energies as follows $$ S_{D-CD_{2}}
+      (E) = S_{D-C}(E)n_{C} + S_{D-D}(E)n_{D} $$ where \( n_{C} \) and \( n_{D} \) are the target (or catcher) number densities
+      of each particle. I can use this to help calculate the stopping distance of the 
+        <a href="https://ntamminga1.github.io/Research-Notes/May_13_2022.html">deuterons in heavy water vapor</a>.</li>
     </ul>
     <p></p>
     <p>Notes on the Hah and Petrov article:</p>
