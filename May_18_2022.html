@@ -18,11 +18,12 @@
     
     <h1>May 18, 2022</h1>
     
-    <p>Notes on the Davis and Petrov article:</p>
+    <h3>Notes on the Davis and Petrov article:</h3>
     <p><i>Angular distribution of neutrons from high-intensity laser–target interactions</i> by J Davis and G M Petrov</p>
     <ul>
       <li>This paper mentions that they have a stopping power equation S(E\( _{i} \)). I believe that they are computing
-      these values as follows. $$ S_{D}(E) = S_{H}(\frac{E}{2}) $$ We can calculate the interactions with carbon and deuterium
+      these values as follows. $$ S_{D-X}(E) = S_{H-X}(\frac{E}{2}) $$ X is the material that our deuterons or hydrogen
+        are interacing with. We can calculate the interactions with carbon and deuterium
       based on the NIST STAR programs and the technique above. The paper combines the C and D energies as follows $$ S_{D-CD_{2}}
       (E) = S_{D-C}(E)n_{C} + S_{D-D}(E)n_{D} $$ where \( n_{C} \) and \( n_{D} \) are the target (or catcher) number densities
       of each particle. I can use this to help calculate the stopping distance of the 
@@ -33,11 +34,15 @@
         simulation was able to put \( ~10^{4} \) neutrons on a target ~10m away.
     </ul>
    
-    <p>Notes on the Hah and Petrov article:</p>
+    <h3>Notes on the Hah and Petrov article:</h3>
     <p><i>High repetition-rate neutron generation by several-mJ, 35 fs pulses interacting with free- flowing D&#8322;O</i> by
       J. Hah, G. M. Petrov, J. A. Nees, et al.</p>
     <ul>
-      <li></li>
+      <li>This experiment is performed on the Lambda-cubed laser facility at Michigan.</li>
+      <li>The laser specs are a 1/2kHz rep rate with a peak intensity of \( >10^{19} \) W/cm&#178; and a pulse energy of 6-12mJ. 
+        It is a Ti:sapphire laser (\( \lambda \)=800nm) with a pulse duration of 35fs. It produced 2.45MeV neutrons.</li>
+      <li>The capliary is 10 microns and the chamber is at a pressure of 20 Torr.</li>
+      <li>
     </ul>
     
     <a href="https://ntamminga1.github.io/Research-Notes/ResearchLibrary.html">Back</a>
