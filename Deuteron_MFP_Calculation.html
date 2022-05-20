@@ -35,13 +35,21 @@
       Using the second equation from the Davis and Petrov article, we can use $$S_{D-D_{2}O}(E) = S_{D-O}(E)n_{O} + 
       S_{D-D}(E)n_{D}$$ Now I need to find the number density of deuterium and oxygen in the chamber, which I can find by 
       assuming that the pressure in the chamber is made up of non-interacting monatomic D&#8322;O vapor. $$ n_{D_{2}O} = n_{O}
-      \mbox{ and } n_{D_{2}O} = 2n_{D} $$ I will treat this as classical ideal gas even though we are working with a pressure 
-      of ~1 Torr. Using the ideal gas equation, we have $$ PV=Nk_{B}T $$ For the number density we can take \( \frac{N}{V} \). 
-      Taking this from the ideal gas equation we will have $$ \frac{N}{V} = \frac{P}{k_{B}T} $$ I am going to assume that T 
-      remains close to room temperature, I will approximate T~300K. This will give a close enough approximation. 1 Torr of 
-      pressure is around 133.3 Pa. Combining all of this we get: $$ n_{D_{2}O} = \frac{P}{k_{B}T} = \frac{133.3 Pa}
-      {1.38 \times 10^{-23} \frac{m^{2}kg}{s^{2}K} * 300K} = 3.22 \times 10^{22} \frac{\mbox{particles}}{m^{3}} = 
-      3.22 \times 10^{16} \frac{\mbox{particles}}{cm^{3}} $$
+      \mbox{ and } n_{D_{2}O} = \frac{1}{2}n_{D} $$ I will treat this as classical ideal gas even though we are working with a
+      pressure of ~1 Torr. Using the ideal gas equation, we have $$ PV=Nk_{B}T $$ For the number density we can take \( 
+      \frac{N}{V} \). Taking this from the ideal gas equation we will have $$ \frac{N}{V} = \frac{P}{k_{B}T} $$ I am going to 
+      assume that T remains close to room temperature, I will approximate T~300K. This will give a close enough approximation. 
+      1 Torr of pressure is around 133.3 Pa. Combining all of this we get: $$ n_{D_{2}O} = \frac{P}{k_{B}T} = \frac{133.3 Pa}
+      {1.38 \times 10^{-23} \frac{J}{K} * 300K} = 3.22 \times 10^{22} \frac{\mbox{particles}}{m^{3}} = 
+      3.22 \times 10^{16} \frac{\mbox{particles}}{cm^{3}} $$ In order to use the stopping power I found from NIST, I will 
+      need the mass density of the particles instead of the number density. I believe that the Davis paper had a stopping 
+      power different than ours, so number density worked for them. The number density of the oxygen is \( n_{O} = n_{D_{2}O} 
+      =  3.22 \times 10^{16} \frac{\mbox{particles}}{cm^{3} \) and the number density of deuterium is \( n_{D} = 2n_{D_{2}O}
+      Converting these to mass density: $$ \rho = nm \mbox{ (for 1 particle in grams)} $$ The mass of a each particle is 16 
+      AMU or \( 2.66 \times 10^{-23} \)g for O and 2 AMU or \(3.32 \times 10^{-24} \)g for each D. The mass densities are 
+      $$ \rho_{O} = 3.22 \times 10^{16} \frac{\mbox{particles}}{cm^{3} 2.66 \times 10^{-23} \frac{g}{\mbox{particle}} = 
+      8.57 \times 10^{-7} \frac{g}{cm^{3}} $$ $$ \rho_{D} = 6.44 \times 10^{16} \frac{\mbox{particles}}{cm^{3} 3.32 \times 
+      10^{-24} \frac{g}{\mbox{particle}} = 2.14 \times 10^{-7} \frac{g}{cm^{3}} $$
     </p>
     
     <a href="https://ntamminga1.github.io/Research-Notes/ResearchLibrary.html">Back</a>
