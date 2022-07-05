@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>June 22, 2022</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {background-color: LightGrey;}
+      table, th, td {border:1px solid black;}
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="search_box">
+        <div class-"search_btn"></div>
+        <input type="text" class="input_search" placeholder="Search...">
+        <button>Search</button>
+      </div>
+    </div>
+    
+    <h1>June 22, 2022</h1>
+    
+    <h3>Keeping tabs on what I've done recently:</h3>
+    <p>I have soldered together the Teensy ethernet package and am currently working on setting up a SCPI communication style network between the 
+      Teensy board and Labview as the client, running through the router. I am basing this off of the 
+      <a href="https://github.com/Vrekrer/Vrekrer_scpi_parser">Vrekrer SCPI Parser</a> which sets up an SCPI ethernet communication system for Arduino 
+      boards, specifically with the ENC28J60 chip. This is because the Vrekrer library calls the <a href="https://github.com/njh/EtherCard">EtherCard</a> 
+      library which is specifically designed for the ENC28J60 chip, which the Teensy 4.1 boards don't have. I am trying to switch over the commands from 
+      EtherCard to the <a href="https://www.arduino.cc/reference/en/libraries/ethernet/">Ethernet.h library</a> that works with our Teensy board.</p>
+    <p>Issues I worked on today (without much success):</p>
+    <ul>
+      <li>I am attempting to find the equivilant for "ether.hisport = 5025; //SCPI PORT" which sets the 
+        <a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers">Transmission Control Port (TCP)</a> value to take SCPI controls. The most 
+        likely solution comes from the <a href="https://github.com/arduino-libraries/Ethernet/blob/master/src/Ethernet.h">Ethernet.h library</a> source 
+        code in a private library using either "static uint8_t socketBegin(uint8_t protocol, uint16_t port);" or 
+        "static void socketConnect(uint8_t s, uint8_t * addr, uint16_t port);"</li>
+      <li>I am also attempting to figure out why I am getting the error code "sketch_jun21e:22: error: 'Identify' was not declared in this scope 
+        my_instrument.RegisterCommand("*IDN?", &Identify);" for all the "my_instrument.RegisterCommand("*IDN?", &Identify);" lines. I believe that I need 
+        to declare Identify in some way, but I'm not sure how. I would think that this would be declared in one of the imported library, but I'm not 
+        sure.</li>
+    </ul>
+    <p><a href="https://www.aelius.com/njh/ethercard/index.html">Here</a> is a good guide to the EtherCard.h library.</p>
+    
+   
+    <a href="https://ntamminga1.github.io/Research-Notes/ResearchLibrary.html">Back</a>
+  </body>
+</html>
