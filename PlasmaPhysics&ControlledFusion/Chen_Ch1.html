@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter 1</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {background-color: LightGrey;}
+    </style>
+  </head>
+  <body>
+    
+    <h1>Chapter 1: Introduction</h1>
+    
+    <h3>3 Plasma Conditions</h3>
+    <ol type="1">
+      <li>\( \lambda_{D} << L \)</li>
+      <li>\( N_{D} >> 1 \)</li>
+      <li>\( \omega \tau > 1 \)</li>
+    </ol>
+    
+    <h3>Section 1</h3>
+    <p>Our universe is mostly made of plasma. However, we do not see this because of the Saha equation, which gives the amount of ionization to be 
+      expected in a gas in thermal equilibrium: $$ \frac{n_{i}}{n_{n}} \approx 2.4 \times 10^{21} \frac{T^{3/2}}{n_{i}} e^{-U_{i}/k_{B}T} $$ Where 
+      the variables are:
+      <ul>
+        <li>\(n_{i}\)  and \(n_{n}\) are the number density in m&#179; of the ionized and neutral atoms</li>
+        <li>T is the temperature of the gas</li>
+        <li>\(k_{B}\) is the Boltzmann constant</li>
+        <li>\(U_{i}\) is the ionization energy of the gas (the energy to remove one electron from the outer shell)</li>
+      </ul>
+    The \(n_{i}\) on the RHS of the equation means that the ratio of ionized atoms to neutral atoms depends on the density of ionized atoms. This is 
+    becuase the recombination rate of ionized atoms depends on how many ionized particles there are to recombine with. The average ratio of ionized 
+    to neutral particles at room temperture is ~\(10^{-122}\).
+    </p>
+  
+    <h3>Section 2</h3>
+    <p><b>Plasma:</b> A quasineutral gas of charged and neutral particles which exhibits collective behavior.
+    <ul>
+      <li><b>Collective Behavior:</b> Motions that depend not only on local conditions but on the state of the plasma in remote regions as well.
+        This means that our ions and electrons are effected by the Coulomb force, which has a behavior of 1/r&#178;. This is the local behavior since
+        it falls as r increases. However, if we take a solid angle of a plasma and increase r, the volume of plasma that will effect our particle
+        will grow with r&#179;. This means that as we increase r, more plasma will effect the motion of our particle, leading to the
+        effect of the remote behavior in our collective behavior.</li>
+      <li><b>Quasineutral:</b> If the dimensions <i>L</i> of a system are much larger than \(\lambda_{D}\), then whenever lcoal concentrations of charge 
+        arise or external potentials are introduced into the system, these are shielded out in a distance short compared with <i>L</i>. This leaves the 
+        bulk of the plasma free of large electric potentials and fields.</li>
+    </ul>
+    </p>
+
+    <h3>Section 3</h3>
+    <p>This section discusses the definition of temperature. Since, in a non-interacting ideal gas, we have \(E_{ave} = \frac{1}{2}k_{B}T\) per degree 
+     of freedom, it is standard in plasma physics to just give values in units of energy. For example, in a 1eV plasma, we have \(k_{B}T=1eV=1.6 \times 
+     10^{-19} J\). This ends up giving us a temperature of T=11,600 K, but we just refer to the plasma as a 1eV plasma instead of saying it's 11,600 
+     degrees. High temperature does not necessarily mean lots of heat, the heat capacity of the material must be considered.</p>
+
+    <h3>Section 4</h3>
+    <p>Debye sheilding occurs when a charge source is placed in a plasma. If there is no thermal energy, the oppositely charged particles will be 
+      attracted to the source and shield its electric field from the rest of the plasma. However, when there is thermal energy of the particles, the 
+      particles on the outer most edge will be able to escape the electric field, allowing a small, finite electric field in the plasma. To find what 
+      the electric potential looks like, we will use Poisson's equation. The text goes through this derviation in detail (see p. 9). We are left with 
+      $$ \lambda_{D} \equiv (\frac{\epsilon_{o}k_{B}T_{e}}{ne^{2}})^{1/2} $$ 
+    </p>
+
+<h3>Section 5</h3>
+<p>The number density of particles in a Debye sphere is $$ N_{D} = n \times \frac{4}{3} \pi \lambda_{D}^{3} $$ which is equal to \(1.38 \times 10^{6} 
+  \frac{T^{3/2}}{n^{1/2}} \) where T is in Kelvin. Thus, collective behavior is defined as \(N_{D} >> 1\) as well as \( \lambda_{D} << L\).</p>
+  
+  <h3>Section 6</h3>
+  <p>The third plasma requirement deals with collisions. \(\omega\) is the frequency of a typical plasma oscillation and \(\tau\) is the mean time 
+    between collisions. The requirement is that \(\omega \tau >1 \).</p>
+    
+    <p>Section 7 discusses the applications of plasma physics, see this section pp. 13-17 for details</p> 
+    
+    
+    <a href="https://ntamminga1.github.io/Research-Notes/Plasma_Physics_Chen.html">Back</a>
+  </body>
+</html>
