@@ -3,58 +3,88 @@
   <head>
     <title>Deuteron MFP Calculation</title>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-      body {background-color: LightGrey;}
+    <style type="text/css">
+      *{margin: 0px; padding: 0px; text-decoration: none;}
+      body{background-color: rgb(242, 242, 242); box-sizing: border-box;}
+      .sidebar{position: fixed; background: rgb(206, 15, 61); width: 250px;= height: 100%; top: 0; left: 0; z-index: 1;}
+      .sidebar h1{text-align: center; font-size: 20px; text-transform: uppercase; padding: 15px; background: rgb(206, 15, 61);}
+      .sidebar ul li{margin: 25px 0;}
+      .sidebar ul li a{color: rgb(51, 51, 51); padding: 0 30px;}
+      .content{margin-left: 260px; margin-top: 10px}
+      .top{background: rgb(206, 15, 61);= height: 100%; width: 100%; top: 0; left: 0; z-index: -1;}
+      .top h1{text-align: right; font-size: 20px; text-transform: uppercase; padding: 15px; background: rgb(206, 15, 61);}
     </style>
   </head>
+    
   <body>
-    <div class="wrapper">
-      <div class="search_box">
-        <div class-"search_btn"></div>
-        <input type="text" class="input_search" placeholder="Search...">
-        <button>Search</button>
-      </div>
+    
+    <div class="sidebar">
+      <h1>Quick Links</h1>
+      <ul class="nav">
+        <li><a href="https://ntamminga1.github.io/Research-Notes/ResearchLibrary.html">
+          <span>Home</span>
+          </a></li>
+        <li><a href="https://ntamminga1.github.io/Research-Notes/DailyNotes.html">
+          <span>Daily Notes</span>
+          </a></li>
+        <li><a href="https://ntamminga1.github.io/Research-Notes/DAQResources.html">
+          <span>DAQ Resources</span>
+          </a></li>
+        <li><a href="https://ntamminga1.github.io/Research-Notes/PythonCode.html">
+          <span>Python Codes</span>
+          </a></li>
+        <li><a href="https://ntamminga1.github.io/Research-Notes/textbooknotes.html">
+          <span>Textbook and Lecture Notes</span>
+          </a></li>
+        <li><a href="https://arxiv.org/list/physics.plasm-ph/recent">
+          <span>Plasma Physics Arxiv</span>
+          </a></li>
+      </ul>
     </div>
     
-    <h1>Deuteron Mean Free Path Calculation</h1>
+    <div class="top">
+      <h1>Deuteron Mean Free Path Calculation</h1>
+    </div>
     
-    <p>
-      Most of the math used in this calculation can be found either from 
-      <a href="https://ntamminga1.github.io/Research-Notes/May_13_2022.html">my meeting with Chris</a> or from 
-      <a href="https://ntamminga1.github.io/Research-Notes/May_18_2022.html">the Davis and Petrov article</a>. 
-      The first step to calculating the MFP will be to find the stopping power. From the Davis and Petrov article, I know that
-      $$ S_{D-X}(E) = S_{H-X}(\frac{E}{2}) $$ Here X will need to be O and D, because we are dealing with a D&#8322;O vapor.
-      Since the PSTAR calculates proton stopping power, which is basically a Hydrogen atom. I will use this in a material 
-      of both Hydrogen (to estimate the \( S_{D-D} \) stopping power), and Oxygen. If we want deuterons of 2.5MeV, then we want
-      to find the PSTAR values for Hydrogen at 1.25MeV based on the above equation. For a proton with incident energy of 1.25MeV 
-      (from the Hah and Petrov article) and Hydrogen, PSTAR says that there is a total stopping power of \( 5.673 \times 10^{2}
-      \frac{MeV cm^{2}}{g} \) and a CDSA of \( 1.253 \times 10^{-3} \frac{g}{cm^{2}} \). For the PSTAR with Oxygen at 1.25MeV, 
-      we have the \( 1.858 \times 10^{2} \frac{MeV cm^{2}}{g} \) and a CDSA of \( 4.265 \times 10^{-3} \frac{g}{cm^{2}} \).  
-    </p>
-    <p>
-      Using the second equation from the Davis and Petrov article, we can use $$S_{D-D_{2}O}(E) = S_{D-O}(E)n_{O} + 
-      S_{D-D}(E)n_{D}$$ Now I need to find the number density of deuterium and oxygen in the chamber, which I can find by 
-      assuming that the pressure in the chamber is made up of non-interacting monatomic D&#8322;O vapor. $$ n_{D_{2}O} = n_{O}
-      \mbox{ and } n_{D_{2}O} = \frac{1}{2}n_{D} $$ I will treat this as classical ideal gas even though we are working with a
-      pressure of ~1 Torr. Using the ideal gas equation, we have $$ PV=Nk_{B}T $$ For the number density we can take \( 
-      \frac{N}{V} \). Taking this from the ideal gas equation we will have $$ \frac{N}{V} = \frac{P}{k_{B}T} $$ I am going to 
-      assume that T remains close to room temperature, I will approximate T~300K. This will give a close enough approximation. 
-      1 Torr of pressure is around 133.3 Pa. Combining all of this we get: $$ n_{D_{2}O} = \frac{P}{k_{B}T} = \frac{133.3 Pa}
-      {1.38 \times 10^{-23} \frac{J}{K} * 300K} = 3.22 \times 10^{22} \frac{\mbox{particles}}{m^{3}} = 
-      3.22 \times 10^{16} \frac{\mbox{particles}}{cm^{3}} $$     
-    </p>
-    <p>
-      In order to use the stopping power I found from NIST, I will need the mass density of the particles instead of the 
-      number density. I believe that the Davis paper had a stopping power different than ours, so number density worked for 
-      them. The number density of the oxygen is \( n_{O} = n_{D_{2}O} =  3.22 \times 10^{16} \frac{\mbox{particles}}{cm^{3} \) 
-      and the number density of deuterium is \( n_{D} = 2n_{D_{2}O} 
-      = 6.44 \times 10^{16} \) Converting these to mass density: $$ \rho = nm \mbox{ (for 1 particle in grams)} $$ The mass of 
-      a each particle is 16 AMU or \( 2.66 \times 10^{-23} \)g for O and 2 AMU or \(3.32 \times 10^{-24} \)g for each D. The 
-      mass densities are \[ \rho_{O} = 3.22 \times 10^{16} \frac{\mbox{particles}}{cm^{3} 2.66 \times 10^{-23} 
-      \frac{g}{\mbox{particle}} = 8.57 \times 10^{-7} \frac{g}{cm^{3}} \] and $$ \rho_{D} = 6.44 \times 10^{16} 
-      \frac{\mbox{particles}}{cm^{3} 3.32 \times 10^{-24} \frac{g}{\mbox{particle}} = 2.14 \times 10^{-7} \frac{g}{cm^{3}} $$
-    </p>
+    <div class="content">
+      <p>
+        Most of the math used in this calculation can be found either from 
+        <a href="https://ntamminga1.github.io/Research-Notes/May_13_2022.html">my meeting with Chris</a> or from 
+        <a href="https://ntamminga1.github.io/Research-Notes/May_18_2022.html">the Davis and Petrov article</a>. 
+        The first step to calculating the MFP will be to find the stopping power. From the Davis and Petrov article, I know that
+        $$ S_{D-X}(E) = S_{H-X}(\frac{E}{2}) $$ Here X will need to be O and D, because we are dealing with a D&#8322;O vapor.
+        Since the PSTAR calculates proton stopping power, which is basically a Hydrogen atom. I will use this in a material 
+        of both Hydrogen (to estimate the \( S_{D-D} \) stopping power), and Oxygen. If we want deuterons of 2.5MeV, then we want
+        to find the PSTAR values for Hydrogen at 1.25MeV based on the above equation. For a proton with incident energy of 1.25MeV 
+        (from the Hah and Petrov article) and Hydrogen, PSTAR says that there is a total stopping power of \( 5.673 \times 10^{2}
+        \frac{MeV cm^{2}}{g} \) and a CDSA of \( 1.253 \times 10^{-3} \frac{g}{cm^{2}} \). For the PSTAR with Oxygen at 1.25MeV, 
+        we have the \( 1.858 \times 10^{2} \frac{MeV cm^{2}}{g} \) and a CDSA of \( 4.265 \times 10^{-3} \frac{g}{cm^{2}} \).  
+      </p>
+      <p>
+        Using the second equation from the Davis and Petrov article, we can use $$S_{D-D_{2}O}(E) = S_{D-O}(E)n_{O} + 
+        S_{D-D}(E)n_{D}$$ Now I need to find the number density of deuterium and oxygen in the chamber, which I can find by 
+        assuming that the pressure in the chamber is made up of non-interacting monatomic D&#8322;O vapor. $$ n_{D_{2}O} = n_{O}
+        \mbox{ and } n_{D_{2}O} = \frac{1}{2}n_{D} $$ I will treat this as classical ideal gas even though we are working with a
+        pressure of ~1 Torr. Using the ideal gas equation, we have $$ PV=Nk_{B}T $$ For the number density we can take \( 
+        \frac{N}{V} \). Taking this from the ideal gas equation we will have $$ \frac{N}{V} = \frac{P}{k_{B}T} $$ I am going to 
+        assume that T remains close to room temperature, I will approximate T~300K. This will give a close enough approximation. 
+        1 Torr of pressure is around 133.3 Pa. Combining all of this we get: $$ n_{D_{2}O} = \frac{P}{k_{B}T} = \frac{133.3 Pa}
+        {1.38 \times 10^{-23} \frac{J}{K} * 300K} = 3.22 \times 10^{22} \frac{\mbox{particles}}{m^{3}} = 
+        3.22 \times 10^{16} \frac{\mbox{particles}}{cm^{3}} $$     
+      </p>
+      <p>
+       In order to use the stopping power I found from NIST, I will need the mass density of the particles instead of the 
+       number density. I believe that the Davis paper had a stopping power different than ours, so number density worked for 
+       them. The number density of the oxygen is \( n_{O} = n_{D_{2}O} =  3.22 \times 10^{16} \frac{\mbox{particles}}{cm^{3} \) 
+       and the number density of deuterium is \( n_{D} = 2n_{D_{2}O} 
+       = 6.44 \times 10^{16} \) Converting these to mass density: $$ \rho = nm \mbox{ (for 1 particle in grams)} $$ The mass of 
+        a each particle is 16 AMU or \( 2.66 \times 10^{-23} \)g for O and 2 AMU or \(3.32 \times 10^{-24} \)g for each D. The 
+       mass densities are \[ \rho_{O} = 3.22 \times 10^{16} \frac{\mbox{particles}}{cm^{3} 2.66 \times 10^{-23} 
+        \frac{g}{\mbox{particle}} = 8.57 \times 10^{-7} \frac{g}{cm^{3}} \] and $$ \rho_{D} = 6.44 \times 10^{16} 
+        \frac{\mbox{particles}}{cm^{3} 3.32 \times 10^{-24} \frac{g}{\mbox{particle}} = 2.14 \times 10^{-7} \frac{g}{cm^{3}} $$
+      </p>
     
-    <a href="https://ntamminga1.github.io/Research-Notes/ResearchLibrary.html">Back</a>
+      <a href="https://ntamminga1.github.io/Research-Notes/ResearchLibrary.html">Back</a>
+    </div>
   </body>
 </html>
