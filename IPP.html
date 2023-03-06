@@ -94,7 +94,12 @@
         \[\delta \rho_{P} = -\sum_{j} \frac{\eta_{oj} q_{j}^2}{T_{J}}\phi\]
         Solving this gives:
         \[-\nabla^2 \phi = \frac{\rho}{\epsilon_{o}}\]
-        \[= \frac{q_{T}}{\epsilon_{o}} \delta (\vec{x} - \vec{x_{o}} - \sum_{j} \frac{\eta_{oj} q_{j}^2}{T_{J} \epsilon_{o}}\phi\]
+        \[= \frac{q_{T}}{\epsilon_{o}} \delta (\vec{x} - \vec{x_{o}}) - \sum_{j} \frac{\eta_{oj} q_{j}^2}{T_{J} \epsilon_{o}}\phi\]
+        Let us define the Debye Length as \( \frac{1}{\lambda_{D}^2} = \frac{\eta_{oj} q_{j}^2}{T_{J} \epsilon_{o}} \), which leaves us with:
+        \[ \nabla^2 - \frac{1}{\lambda_{D}^2} \phi = -\frac{q_{T}}{\epsilon_{o}} \delta (\vec{x} - \vec{x_{o}}) \]
+        The \(\frac{1}{\lambda_{D}^2}\) is what contributes to the Debye sheilding. The Debye sheilding kills the electric potential with 
+        respect to r. The formal solution to this is given by:
+        \[\phi(\vec{x}) = \frac{q_{T} e^\frac{-|\vec{x}-\vec{x_{o}}|}{\lambda_{D}}}{4 \pi \epsilon_{o} |\vec{x}-\vec{x_{o}}|}
       </p>
     </div>
   </body>
